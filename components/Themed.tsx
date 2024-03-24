@@ -3,10 +3,9 @@
  * https://docs.expo.io/guides/color-schemes/
  */
 
-import { Text as DefaultText, View as DefaultView } from 'react-native';
+import { Text as DefaultText, useColorScheme, View as DefaultView, FlatList as DefaultFlatList, ActivityIndicator as DefaultActivityIndicator } from 'react-native';
 
-import Colors from '@/constants/Colors';
-import { useColorScheme } from './useColorScheme';
+import Colors from '../constants/Colors';
 
 type ThemeProps = {
   lightColor?: string;
@@ -15,6 +14,8 @@ type ThemeProps = {
 
 export type TextProps = ThemeProps & DefaultText['props'];
 export type ViewProps = ThemeProps & DefaultView['props'];
+export type FlatListProps<T> = ThemeProps & DefaultFlatList<T>['props'];
+export type ActivityIndicatorProps = ThemeProps & DefaultActivityIndicator['props'];
 
 export function useThemeColor(
   props: { light?: string; dark?: string },
@@ -42,4 +43,18 @@ export function View(props: ViewProps) {
   const backgroundColor = useThemeColor({ light: lightColor, dark: darkColor }, 'background');
 
   return <DefaultView style={[{ backgroundColor }, style]} {...otherProps} />;
+}
+
+export function FlatList<T>(props: FlatListProps<T>) {
+  const { lightColor, darkColor, ...otherProps } = props;
+  const backgroundColor = useThemeColor({ light: lightColor, dark: darkColor }, 'background');
+
+  return <DefaultFlatList<T> style={{ backgroundColor }} {...otherProps} />;
+}
+
+export function ActivityIndicator(props: ActivityIndicatorProps) {
+  const { lightColor, darkColor, ...otherProps } = props;
+  const color = useThemeColor({ light: lightColor, dark: darkColor }, 'text');
+
+  return <DefaultActivityIndicator color={color} {...otherProps} />;
 }
