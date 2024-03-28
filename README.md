@@ -7,17 +7,17 @@ Frontend code for the mobile application of Ubymed.
 Active Development
 
 ## Built With
-- Expo (v50.014): Framework for the frontend of the mobile app.
-- Ubymed Backend API (v1.0): API used to connect to backend and database.
+- **Expo (v50.014)**: Framework for the frontend of the mobile app.
+- **Ubymed Backend API (v1.0)**: API used to connect to backend and database.
 
 ## Getting Started
 
 ### Prerequisites
 Before you start, ensure you have the following software installed in your machine:
 - **Terminal**: Access to Command Line Interface.
-- **Node.js**: Required by Expo.
-- **Git**: Required by Expo.
-- **Watchman**: Required by Expo.
+- **Node.js (v21.7.1)**: Required by Expo.
+- **Git (v2.44.0)**: Required by Expo.
+- **Watchman (v2024.03.18.00)**: Required by Expo.
 
 ### Recommended Tools
 - Visual Studio Code
