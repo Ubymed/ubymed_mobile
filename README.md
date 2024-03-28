@@ -14,9 +14,10 @@ Active Development
 
 ### Prerequisites
 Before you start, ensure you have the following software installed in your machine:
-- Node.js: Required by Expo
-- Git: Required by Expo
-- Watchman: Required by Expo
+- **Terminal**: Access to Command Line Interface. (Required)
+- **Node.js**: Required by Expo.
+- **Git**: Required by Expo.
+- **Watchman**: Required by Expo.
 
 ### Recommended Tools
 - Terminal
